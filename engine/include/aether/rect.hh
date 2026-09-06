@@ -34,7 +34,7 @@ struct rect final : operators<rect, T, 4> {
 	        , height(hv) {}
 
 	[[nodiscard]] constexpr vec2<T> position() const { return vec2<T>(x, y); }
-	[[nodiscard]] constexpr size<T> bounds() const { return vec2<T>(width, height); };
+	[[nodiscard]] constexpr size<T> bounds() const { return size<T>(width, height); };
 
 	constexpr T& operator[](size_t i) {
 		switch (i) {
